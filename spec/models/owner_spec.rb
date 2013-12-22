@@ -14,7 +14,9 @@ describe Owner do
     it { should_not have_valid(:email).when(*blank) }
   end
 
- # describe 'associations' do
- #   it { should have_many(:pets) }
- # end
+  describe 'associations' do
+    it { should have_many(:owner_pets) }
+    it { should have_many(:pets).through(:owner_pets) }
+  end
+
 end
