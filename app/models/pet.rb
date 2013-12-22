@@ -7,9 +7,4 @@ class Pet < ActiveRecord::Base
   has_many :owners, through: :owner_pets,
     inverse_of: :pet
 
-  # has_many :owner_pets,
-  #   inverse_of: :owner
-
-  # has_many :pets, through: :owner_pets,
-  #   inverse_of: :pet
 end
